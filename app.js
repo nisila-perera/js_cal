@@ -1,6 +1,6 @@
 function calculate() {
-    var num1 = parseFloat(document.getElementById('num1').value);
-    var num2 = parseFloat(document.getElementById('num2').value);
+    var num1 = Number(document.getElementById('num1').value);
+    var num2 = Number(document.getElementById('num2').value);
     var operator = document.getElementById('operators').value;
     var result;
     
@@ -17,9 +17,7 @@ function calculate() {
         case '/':
             result = num1 / num2;
             break;
-        default:
-            result = "Invalid operator";
     }
     
-    document.getElementById('output').textContent = "Result: " + result;
+    document.getElementById('output').innerHTML = "Result: " + result;
 }

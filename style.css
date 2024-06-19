@@ -33,7 +33,6 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
 }
 .btn-primary {
     background-color: #007bff;
