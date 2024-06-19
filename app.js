@@ -1,17 +1,25 @@
-function calc(){
-    let num1="";
-    let num2="";
-    let operator=document.getElementById("operaters").value;
-    num1=new Number(document.getElementById("num 1").value);
-    num2=new Number(document.getElementById("num 2").value); 
-    let lblOutput=document.getElementById("output");
-    let answer;
-   
-    switch(operator){
-        case "+":answer=num1+num2;break;
-        case "-":answer=num1-num2;break;
-        case "*":answer=num1*num2;break;
-        case "/":answer=num1/num2;break;
+function calculate() {
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
+    var operator = document.getElementById('operators').value;
+    var result;
+    
+    switch(operator) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            result = num1 / num2;
+            break;
+        default:
+            result = "Invalid operator";
     }
-    lblOutput.innerHTML=answer;
+    
+    document.getElementById('output').textContent = "Result: " + result;
 }
